@@ -1,3 +1,4 @@
+# Controlador: intermediario entre capa Presentación y Capa de servicio
 
 from .service import UserService
 
