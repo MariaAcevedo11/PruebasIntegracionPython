@@ -70,3 +70,6 @@ Se considera una prueba de integración, ya que se está verificando cómo inter
 ##  Parte 3 — Integración con API externa (cliente HTTP + servidor simulado)
 ** Cuál es la diferencia entre mockear la librería HTTP vs. levantar un servidor simulado**
 Mockear la librería es más rápido y enfocado a pruebas unitarias porque aísla el código, solo verifica cómo el código maneja la respuesta, mientras que el servidor simulado es más realista y se usa en pruebas de integración porque valida cómo interactúan los componentes a través de HTTP, el código hace una petición HTTP real (aunque local), y el servidor responde como lo haría una API externa asi probando la integración completa de la llamada HTTP.
+
+## Parte 4 — Integración con base de datos (SQLite en memoria)
+**
