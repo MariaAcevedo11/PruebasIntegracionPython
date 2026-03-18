@@ -56,3 +56,14 @@ test_part4_database.py — base de datos (SQLite in‑memory).
 
 README.md con instrucciones ejecutables.
 
+# ACTIVIDAD
+## Parte 1 — Integración por capas (Controller → Service → Repository)
+**Si cambias el formato de salida del controlador, ¿qué otras capas tendrías que adaptar?**
+Si se cambia el formato de salida del controlador, principalmente habría que adaptar la capa de servicio, ya que el controlador depende de funciones como get_user_full_name, que a su vez llama a service.get_full_name.
+El impacto principal estaría en el controlador y el servicio, mientras que el repositorio y el modelo solo se verían afectados si cambia la estructura interna de los datos.
+
+## Parte 2 — Integración modular (Módulo A usa Módulo B)
+**Explica por qué esta es una prueba de integración (y no solo unitaria)**
+Porque el módulo order se conecta con discount para poder obtener el descuento dentro de la función final_total. Esto significa que order depende directamente de discount para calcular el valor final.
+Se considera una prueba de integración, ya que se está verificando cómo interactúan ambos módulos en conjunto. No es una prueba unitaria porque no se está evaluando una parte aislada del sistema, sino la conexión y el funcionamiento entre múltiples módulos.
+
